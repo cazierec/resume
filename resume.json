@@ -1,0 +1,17 @@
+{
+    "basics": {
+        "name" : "Brendan Cazier",
+        "label": "Mechanical Engineer",
+        "email": "***REMOVED***",
+        "phone": "+1 ***REMOVED***",
+        "website": "https://thecaziers.com",
+        "location": {
+            "address": "2803 E 1st Pl",
+            "postalCode": "OK 74104",
+            "city": "Tulsa",
+            "countryCode": "US",
+            "region": "Oklahoma"
+        }
+    }
+
+}
