@@ -12,18 +12,33 @@
             "city": "Tulsa",
             "countryCode": "US",
             "region": "Oklahoma"
-    },
+        },
         "profiles": [
             {
-        "network": "Github",
-        "username": "cazier",
-        "url": "https://github.com/cazier"
-    },
-    {
-        "network": "Gitea",
-        "username": "bcazier",
-        "url": "https://git.cazier.xyz/bcazier"
+                "network": "Github",
+                "username": "cazier",
+                "url": "https://github.com/cazier"
+            },
+            {
+                "network": "Gitea",
+                "username": "bcazier",
+                "url": "https://git.cazier.xyz/bcazier"
             }
         ]
     },
+    "work": [
+        {
+            "company": "SWECO - MI SWACO, A Schlumberger Company",
+            "position": "Summer Intern",
+            "website": "https://www.slb.com/companies/m-i-swaco",
+            "startDate": "2011-05-30",
+            "endDate": "2011-08-12",
+            "summary": "SWECO is an American oilfield services manufacturer of industrial filtration devices for seperating solids and fluids.",
+            "highlights": [
+                "Summer Internship, primarily 3D modelling hydraulic parts in Solidworks.",
+                "Developed a catalog of realtime, parametrically-generated, 3D models for hydraulic manifold designs (Solidworks)",
+                "Worked alongside technicians to create an instrument cabinet system to store manifolds and prototypes."
+            ]
+        }
+    ]
 }
