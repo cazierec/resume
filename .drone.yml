@@ -6,4 +6,4 @@ steps:
       commands:
         - apk add nodejs npm wkhtmltopdf
         - npm install hackmyresume -g
-        - hackmyresume validate resume.json --assert
+        - hackmyresume validate resume.json
