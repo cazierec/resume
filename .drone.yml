@@ -1,0 +1,9 @@
+kind: pipeline
+name: CI
+steps:
+    - name: validating
+      image: alpine:latest
+      commands:
+        - apk add nodejs npm wkhtmltopdf
+        - npm install hackmyresume -g
+        - hackmyresume validate resume.json --assert
