@@ -1,6 +1,6 @@
 {
     "basics": {
-        "name" : "Brendan Cazier",
+        "name": "Brendan Cazier",
         "label": "Mechanical Engineer",
         "email": "***REMOVED***",
         "phone": "+1 ***REMOVED***",
@@ -13,7 +13,8 @@
             "countryCode": "US",
             "region": "Oklahoma"
     },
-    "profiles": [{
+        "profiles": [
+            {
         "network": "Github",
         "username": "cazier",
         "url": "https://github.com/cazier"
