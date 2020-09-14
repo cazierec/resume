@@ -23,5 +23,7 @@
         "network": "Gitea",
         "username": "bcazier",
         "url": "https://git.cazier.xyz/bcazier"
-    }]
+            }
+        ]
+    },
 }
