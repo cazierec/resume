@@ -44,15 +44,16 @@
         },
         {
             "company": "SWECO - MI SWACO, A Schlumberger Company",
-            "position": "Summer Intern",
+            "position": "CAD Modeller",
             "website": "https://www.slb.com/companies/m-i-swaco",
             "startDate": "2011-05-30",
             "endDate": "2011-08-12",
-            "summary": "SWECO is an American oilfield services manufacturer of industrial filtration devices for seperating solids and fluids.",
+            "summary": "SWECO is an American oilfield services manufacturer of industrial filtration devices for seperating solids and fluids",
             "highlights": [
-                "Summer Internship, primarily 3D modelling hydraulic parts in Solidworks.",
-                "Developed a catalog of realtime, parametrically-generated, 3D models for hydraulic manifold designs (Solidworks)",
-                "Worked alongside technicians to create an instrument cabinet system to store manifolds and prototypes."
+                "Summer Internship, modelling hydraulic components for shaker devices in Solidworks",
+                "Replaced a catalog of individual models with parametrically-generated designs allowing for on-the-fly creation of new and customized parts",
+                "Worked alongside technicians to create an instrument cabinet system to store manifold prototypes",
+                "Developed, and prototyped, a training program for combining the individual components to full oilfield assemblies to demonstrate sales capabilities"
             ]
         }
     ]
