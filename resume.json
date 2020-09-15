@@ -35,11 +35,14 @@
             "endDate": "2013-08-16",
             "summary": "Returning Summer Internship in Boeing Systems Project Engineering",
             "highlights": [
+                "Expanded fleet scope to include Boeing B757 and B767 Fleets",
                 "Created an Excel VBA \"Program\" to provide aircraft leasors of B757s with generated reports of Electrical Load and Structural Modification data",
                 "Developed Maintenance procedures, specifically focused on Fire Suppression, and Oxygen Generation systems, and Corrosion Prevention and Control (CPCP) Program"
             ]
         },
         {
+            "company": "American Airlines",
+            "position": "Engineer - Coop Program (Long-term Internship)",
             "website": "https://www.aa.com",
             "startDate": "2012-05-28",
             "endDate": "2013-01-11",
