@@ -29,7 +29,15 @@
     "work": [
         {
             "company": "American Airlines",
-            "position": "Coop Engineer",
+            "position": "Engineering - Internship",
+            "website": "https://www.aa.com",
+            "startDate": "2013-06-03",
+            "endDate": "2013-08-16",
+            "summary": "Returning Summer Internship in Boeing Systems Project Engineering",
+            "highlights": [
+            ]
+        },
+        {
             "website": "https://www.aa.com",
             "startDate": "2012-05-28",
             "endDate": "2013-01-11",
