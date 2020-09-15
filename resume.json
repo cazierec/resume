@@ -31,6 +31,19 @@
             "company": "American Airlines",
             "position": "Engineering - Internship",
             "website": "https://www.aa.com",
+            "startDate": "2014-05-28",
+            "endDate": "2014-08-15",
+            "summary": "Returning Summer Internship in Airbus Entry into Service Engineering",
+            "highlights": [
+                "Developed preventative and repair procedures and technical documentation ahead of the introduction of the new A320F fleet",
+                "Acted as a liason between various Maintenance, Operations Planning, and Engineering departments and the FAA",
+                "Began a preliminary database of parts required for scheduled and unscheduled Maintenance visits to reduce delays associated with specific damage conditions"
+            ]
+        },
+        {
+            "company": "American Airlines",
+            "position": "Engineering - Internship",
+            "website": "https://www.aa.com",
             "startDate": "2013-06-03",
             "endDate": "2013-08-16",
             "summary": "Returning Summer Internship in Boeing Systems Project Engineering",
