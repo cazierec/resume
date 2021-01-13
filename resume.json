@@ -5,7 +5,7 @@
         "email": "***REMOVED***",
         "phone": "+1 ***REMOVED***",
         "website": "https://thecaziers.com",
-        "summary": "I'm a mechanical engineer by education, having spent all of my early career working with  physical problems associated with aircraft maintenance and reliability. Originally I used coding as a hobby and to try to automate various tasks either at work or at home, but I'm now looking to turn that into my profession. I have worked on both long-term, large-scope, campains, as well as high urgency, triage-esque, projects. I enjoy problem solving, and have worked to provide solutions while conscious of labor difficulties, costs, reliability and regulatory requirements, and more.",
+        "summary": "I'm a mechanical engineer by education, having spent all of my early career working with  physical problems associated with aircraft maintenance and reliability. Originally I used coding as a hobby and to try to automate various tasks either at work or at home, but I'm now looking to turn that into my profession. I have worked on both long-term, large-scope, campaigns, as well as high urgency, triage-esque, projects. I enjoy problem solving, and have worked to provide solutions while conscious of labor difficulties, costs, reliability and regulatory requirements, and more.",
         "location": {
             "address": "2803 E 1st Pl",
             "postalCode": "OK 74104",
@@ -63,25 +63,25 @@
             "endDate": "2013-01-11",
             "summary": "Extended Internship Program in Narrowbody Systems Project Engineering",
             "highlights": [
-                "Focused primarily on Boeing B737-NG and MD80 Fleets",
-                "Revised technical documentation, ensuring compliance to FAA, CFR, and OEM regulations",
-                "Designed and prototyped a drop-in air filtration system for the B737-NG and B757, and began fleet implementation",
-                "Benchmarked fleetwide reliability improvements to minimize in-service cancellations and in-flight issues",
+                "Primarily focused on the Boeing B737-NG and MD80 Narrowbody Fleets",
+                "Revised technical documentation, ensuring compliance to FAA, CFR, and OEM regulations, to incorporate reliability and ease of maintenance changes",
+                "Created a folio to demonstrate B737-NG Nitrogen Generation System Maintenance schedule and requirements to Senior Management and regulatory agencies.",
+                "Designed and prototyped a drop-in air filtration system for the B737-NG and B757, working with outside vendor groups for manufacturing and airflow testing, and implemented across fleets, in excess of 500 aircraft",
+                "Analyzed frequently reported maintenance issues to evaluate the possibility of extending the maintenance intervals by 50%",
                 "Developed Maintenance procedures for all fleets, specifically focused on Nitrogen Generation System, Landing Gear, and Fuel Management systems"
             ]
         },
         {
             "company": "SWECO - MI SWACO, A Schlumberger Company",
-            "position": "CAD Modeller",
+            "position": "CAD Drafter - Internship",
             "website": "https://www.slb.com/companies/m-i-swaco",
             "startDate": "2011-05-30",
             "endDate": "2011-08-12",
-            "summary": "SWECO is an American oilfield services manufacturer of industrial filtration devices for seperating solids and fluids",
+            "summary": "SWECO is an American oilfield services manufacturer of industrial filtration devices for separating solids and fluids",
             "highlights": [
-                "Summer Internship, modelling hydraulic components for shaker devices in Solidworks",
-                "Replaced a catalog of individual models with parametrically-generated designs allowing for on-the-fly creation of new and customized parts",
-                "Worked alongside technicians to create an instrument cabinet system to store manifold prototypes",
-                "Developed, and prototyped, a training program for combining the individual components to full oilfield assemblies to demonstrate sales capabilities"
+                "Replaced catalog of approximately 4000 individual hydraulic component models with parametrically-generated designs and frameworks, allowing for on-the-fly creation of parts",
+                "The parametric generation approach resulted in ~75% decrease in storage requirements and 3x speed increase, while also providing the funcionality of creating individually customizable models",
+                "Developed and offered a training program for combining the individual components to create full oilfield assemblies to demonstrate sales capabilities"
             ]
         }
     ]
