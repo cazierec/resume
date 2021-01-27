@@ -1,0 +1,14 @@
+{
+    "runOnSave.commands": [
+        {
+            "match": "resume.json",
+            "command": "cd ${fileDirname}; hackmyresume build resume.json TO out/spartan.html -t node_modules/jsonresume-theme-spartan",
+            "runIn": "backend"
+        },
+        {
+            "match": "resume.json",
+            "command": "cd ${fileDirname}; hackmyresume build resume.json TO out/stack.html -t node_modules/jsonresume-theme-stackoverflow",
+            "runIn": "backend"
+        }
+    ],
+}
