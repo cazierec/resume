@@ -18,11 +18,6 @@
                 "network": "Github",
                 "username": "cazier",
                 "url": "https://github.com/cazier"
-            },
-            {
-                "network": "Gitea",
-                "username": "bcazier",
-                "url": "https://git.cazier.xyz/bcazier"
             }
         ]
     },
@@ -42,6 +37,19 @@
         }
     ],
     "work": [
+        {
+            "company": "American Airlines - Tech Ops - Maintenance & Engineering",
+            "position": "Level 2/3 Base Support Engineer",
+            "website": "https://www.aa.com",
+            "startDate": "2015-09-28",
+            "summary": "Working in the hangars alongside mechanics to revise errors in technical documentation, providing reinforcing repairs and damage removal instructions. These repairs required development and approval in a span of hours to ensure work continued and the Maintenance visits did not exceed scheduled span.",
+            "highlights": [
+                "Writing technical repair documentation to provide mechanics with detailed step-by-step instructions to address corrosion, impact, wear, and other damages on aircraft structure.",
+                "Wrote structural repairs installing reinforcing doublers/triplers, repair straps, nested angles, etc., in compliance with 14CFR43 and other regulatory requirements.",
+                "Primarily focused on the B737-NG and A320F fleets daily triage and continuing maintenance. Additionally, worked a number of projects including B777 and B787 Cabin Retrofit Programs, as well as B737-MAX deliveries.",
+                "Created internal drawings to fabricate replacement components in-house to reduce costs and supplier delays from the OEM."
+            ]
+        },
         {
             "company": "American Airlines - Johnson Service Group",
             "position": "Contract Engineer",
