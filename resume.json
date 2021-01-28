@@ -104,6 +104,17 @@
             "fluency": "Beginner"
         }
     ],
+    "interests": [
+        {
+            "name": "Flying"
+        },
+        {
+            "name": "Self-Hosting"
+        },
+        {
+            "name": "Travel"
+        }
+    ],
     "skills": [
         {
             "name": "Web Development",
