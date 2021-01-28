@@ -5,7 +5,7 @@
         "email": "***REMOVED***",
         "phone": "***REMOVED***",
         "website": "https://thecaziers.com",
-        "summary": "A mechanical engineer by education, having spent all of my early career fixing physical problems in aircraft maintenance and reliability. I've often used coding as a hobby and to try to automate various tasks either at work or at home, but I'm now looking to turn that into my profession. I have worked on both long-term, large-scope, campaigns, as well as high urgency, triage-esque, projects. I enjoy problem solving, and have worked to provide solutions while conscious of labor difficulties, costs, reliability and regulatory requirements, and more.",
+        "summary": "A mechanical engineer by education, having spent all of my early career fixing physical problems in aircraft maintenance and reliability. I've often used coding as a hobby and to try to automate various tasks either at work or at home, but I'm now looking to turn that into my profession. I have worked on both long-term, large-scope, campaigns, in addition to high urgency, triage-esque, projects. I enjoy problem solving, and have worked to provide solutions while conscious of labor difficulties, costs, reliability and regulatory requirements, and more.",
         "location": {
             "address": "2803 E 1st Pl",
             "postalCode": "OK 74104",
@@ -50,8 +50,8 @@
             "endDate": "2015-09-25",
             "summary": "Returning under a project contract to implement a pest control program, and historical maintenance tracking.",
             "highlights": [
-                "Initiated and implemented an airline-wide pest control program ",
-                "Created an Excel VBA \"Program\" to provide aircraft leasors of B757s with generated reports of Electrical Load and Structural Modification data",
+                "Initiated and implemented an airline-wide pest control program accomplished on full 900+ aircraft fleet, replacing two separate pre-merger programs with a unified system.",
+                "Created an Excel VBA \"Program\" to provide B757 lessors with generated reports of Electrical Load and Structural Modification data",
                 "Developed Maintenance procedures, specifically focused on Fire Suppression, and Oxygen Generation systems, and Corrosion Prevention and Control (CPCP) Program",
                 "Tracked MD80 Cockpit window pane, frame, and seal temperature exposure in an effort to reduce unneeded part replacement and save on parts, labor, and cost"
             ]
@@ -61,10 +61,10 @@
             "position": "Coop/Internships — Narrow- and Widebody Fleet Engineering",
             "website": "https://www.aa.com",
             "startDate": "2012-05-28",
-            "endDate": "2015-08-15",
-            "summary": "One of the largest airlines globally, AA Tech Ops maintains a number of different aicraft fleets from multiple manufacturers. I worked with them on and off for three years, while in school, as a coop and intern in various Fleet project groups.",
+            "endDate": "2014-08-15",
+            "summary": "One of the largest airlines globally, AA Tech Ops maintains a number of different aircraft fleets from multiple manufacturers. I worked with them on and off for three years, while in school, as a coop and intern in various Fleet project groups.",
             "highlights": [
-                "Starting with the B737-NG and MD80 Narrowbody fleets, and eventually including B757/B767, revising technical documentation in compliance with FAA, CFR, and OEM regulations, to incorporate reliability and ease of maintenance changes",
+                "Starting with the Boeing Narrowbody fleets, and eventually including B757/B767, revising technical documentation in compliance with FAA, CFR, and OEM regulations, to incorporate reliability and ease of maintenance changes",
                 "Created a package of documentation to demonstrate B737-NG Nitrogen Generation System Maintenance schedule and requirements to Senior Management and regulatory agencies.",
                 "Designed a drop-in air filtration system for the B737-NG and B757, working with outside vendor groups for manufacturing and airflow testing, and implemented across fleets, in excess of 500 aircraft",
                 "Analyzed repeat Maintenance issues to evaluate the possibility of extending the out-of-service check intervals by 50%",
@@ -80,7 +80,7 @@
             "summary": "SWECO is an American oilfield services manufacturer of industrial filtration devices for separating solids and fluids.",
             "highlights": [
                 "Replaced catalog of approximately 4000 individual hydraulic component CAD models with parametrically-generated designs and frameworks, allowing for on-the-fly creation of parts",
-                "The parametric generation approach resulted in ~75% decrease in storage requirements and 3x speed increase, while also providing the funcionality of creating individually customizable models",
+                "The parametric generation approach resulted in ~75% decrease in storage requirements and 3x speed increase, while also providing the functionality of creating individually customizable models",
                 "Developed and offered a training program for combining the individual components to create full oilfield assemblies to demonstrate sales capabilities"
             ]
         }
@@ -122,8 +122,8 @@
             "name": "Web Development",
             "level": "Advanced",
             "keywords": [
-                "Python Backends (Flask/Django)",
-                "HTML/Javascript",
+                "Python (Flask/Django)",
+                "HTML/JavaScript",
                 "CSS",
                 "WebSockets"
             ]
