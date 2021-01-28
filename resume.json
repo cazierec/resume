@@ -85,5 +85,24 @@
                 "Developed and offered a training program for combining the individual components to create full oilfield assemblies to demonstrate sales capabilities"
             ]
         }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Native Speaker"
+        },
+        {
+            "language": "Spanish",
+            "fluency": "Native Speaker"
+        },
+        {
+            "language": "German",
+            "fluency": "Intermediate"
+        },
+        {
+            "language": "Russian",
+            "fluency": "Beginner"
+        }
+    ],
     ]
 }
