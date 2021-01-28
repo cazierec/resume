@@ -3,9 +3,9 @@
         "name": "Brendan Cazier",
         "label": "Mechanical Engineer",
         "email": "***REMOVED***",
-        "phone": "+1 ***REMOVED***",
+        "phone": "***REMOVED***",
         "website": "https://thecaziers.com",
-        "summary": "I'm a mechanical engineer by education, having spent all of my early career working with  physical problems associated with aircraft maintenance and reliability. Originally I used coding as a hobby and to try to automate various tasks either at work or at home, but I'm now looking to turn that into my profession. I have worked on both long-term, large-scope, campaigns, as well as high urgency, triage-esque, projects. I enjoy problem solving, and have worked to provide solutions while conscious of labor difficulties, costs, reliability and regulatory requirements, and more.",
+        "summary": "A mechanical engineer by education, having spent all of my early career fixing physical problems in aircraft maintenance and reliability. I've often used coding as a hobby and to try to automate various tasks either at work or at home, but I'm now looking to turn that into my profession. I have worked on both long-term, large-scope, campaigns, as well as high urgency, triage-esque, projects. I enjoy problem solving, and have worked to provide solutions while conscious of labor difficulties, costs, reliability and regulatory requirements, and more.",
         "location": {
             "address": "2803 E 1st Pl",
             "postalCode": "OK 74104",
@@ -26,21 +26,22 @@
             }
         ]
     },
-    "work": [
+    "education": [
         {
-            "company": "American Airlines",
-            "position": "Engineering - Internship",
-            "website": "https://www.aa.com",
-            "startDate": "2014-05-28",
-            "endDate": "2014-08-15",
-            "summary": "Returning Summer Internship in Airbus and Boeing Systems Project Engineering",
-            "highlights": [
-                "Continued prior Project Engineering responsibilities for preventative maintenance on Boeing fleets",
-                "Assisted Airbus Entry into Service to develop preventative and repair procedures and technical documentation ahead of the introduction of the new A320F fleet",
-                "Acted as a liason between various Maintenance, Operations Planning, and Engineering departments and the FAA",
-                "Began a preliminary database of parts required for scheduled and unscheduled Maintenance visits to reduce delays associated with specific damage conditions"
+            "institution": "Rensselaer Polytechnic Institute",
+            "area": "Mechanical Engineer",
+            "studyType": "Bachelor",
+            "startDate": "2010-08",
+            "endDate": "2014-12",
+            "courses": [
+                "CSCI-1100 - Computer Science I",
+                "CSCI-1190 - Beginning C Programming for Engineers",
+                "ENGR-2350 - Embedded Control",
+                "ENGR-4300 - Electronic Instrumentation"
             ]
-        },
+        }
+    ],
+    "work": [
         {
             "company": "American Airlines",
             "position": "Engineering - Internship",
