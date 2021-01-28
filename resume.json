@@ -43,32 +43,31 @@
     ],
     "work": [
         {
-            "company": "American Airlines",
-            "position": "Engineering - Internship",
+            "company": "American Airlines - Johnson Service Group",
+            "position": "Contract Engineer",
             "website": "https://www.aa.com",
-            "startDate": "2013-06-03",
-            "endDate": "2013-08-16",
-            "summary": "Returning Summer Internship in Boeing Systems Project Engineering",
+            "startDate": "2014-08-28",
+            "endDate": "2015-09-25",
+            "summary": "Returning under a project contract to implement a pest control program, and historical maintenance tracking.",
             "highlights": [
-                "Expanded fleet scope to include Boeing B757 and B767 Fleets",
+                "Initiated and implemented an airline-wide pest control program ",
                 "Created an Excel VBA \"Program\" to provide aircraft leasors of B757s with generated reports of Electrical Load and Structural Modification data",
                 "Developed Maintenance procedures, specifically focused on Fire Suppression, and Oxygen Generation systems, and Corrosion Prevention and Control (CPCP) Program",
                 "Tracked MD80 Cockpit window pane, frame, and seal temperature exposure in an effort to reduce unneeded part replacement and save on parts, labor, and cost"
             ]
         },
         {
-            "company": "American Airlines",
-            "position": "Engineer - Coop Program (Long-term Internship)",
+            "company": "American Airlines - Tech Ops - Maintenance & Engineering",
+            "position": "Coop/Internships — Narrow- and Widebody Fleet Engineering",
             "website": "https://www.aa.com",
             "startDate": "2012-05-28",
-            "endDate": "2013-01-11",
-            "summary": "Extended Internship Program in Narrowbody Systems Project Engineering",
+            "endDate": "2015-08-15",
+            "summary": "One of the largest airlines globally, AA Tech Ops maintains a number of different aicraft fleets from multiple manufacturers. I worked with them on and off for three years, while in school, as a coop and intern in various Fleet project groups.",
             "highlights": [
-                "Primarily focused on the Boeing B737-NG and MD80 Narrowbody Fleets",
-                "Revised technical documentation, ensuring compliance to FAA, CFR, and OEM regulations, to incorporate reliability and ease of maintenance changes",
-                "Created a folio to demonstrate B737-NG Nitrogen Generation System Maintenance schedule and requirements to Senior Management and regulatory agencies.",
-                "Designed and prototyped a drop-in air filtration system for the B737-NG and B757, working with outside vendor groups for manufacturing and airflow testing, and implemented across fleets, in excess of 500 aircraft",
-                "Analyzed frequently reported maintenance issues to evaluate the possibility of extending the maintenance intervals by 50%",
+                "Starting with the B737-NG and MD80 Narrowbody fleets, and eventually including B757/B767, revising technical documentation in compliance with FAA, CFR, and OEM regulations, to incorporate reliability and ease of maintenance changes",
+                "Created a package of documentation to demonstrate B737-NG Nitrogen Generation System Maintenance schedule and requirements to Senior Management and regulatory agencies.",
+                "Designed a drop-in air filtration system for the B737-NG and B757, working with outside vendor groups for manufacturing and airflow testing, and implemented across fleets, in excess of 500 aircraft",
+                "Analyzed repeat Maintenance issues to evaluate the possibility of extending the out-of-service check intervals by 50%",
                 "Developed Maintenance procedures for all fleets, specifically focused on Nitrogen Generation System, Landing Gear, and Fuel Management systems"
             ]
         },
