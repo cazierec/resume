@@ -74,13 +74,13 @@
         },
         {
             "company": "SWECO - MI SWACO, A Schlumberger Company",
-            "position": "CAD Drafter - Internship",
+            "position": "Internship — CAD Drafting",
             "website": "https://www.slb.com/companies/m-i-swaco",
             "startDate": "2011-05-30",
             "endDate": "2011-08-12",
-            "summary": "SWECO is an American oilfield services manufacturer of industrial filtration devices for separating solids and fluids",
+            "summary": "SWECO is an American oilfield services manufacturer of industrial filtration devices for separating solids and fluids.",
             "highlights": [
-                "Replaced catalog of approximately 4000 individual hydraulic component models with parametrically-generated designs and frameworks, allowing for on-the-fly creation of parts",
+                "Replaced catalog of approximately 4000 individual hydraulic component CAD models with parametrically-generated designs and frameworks, allowing for on-the-fly creation of parts",
                 "The parametric generation approach resulted in ~75% decrease in storage requirements and 3x speed increase, while also providing the funcionality of creating individually customizable models",
                 "Developed and offered a training program for combining the individual components to create full oilfield assemblies to demonstrate sales capabilities"
             ]
