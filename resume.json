@@ -104,5 +104,51 @@
             "fluency": "Beginner"
         }
     ],
+    "skills": [
+        {
+            "name": "Web Development",
+            "level": "Advanced",
+            "keywords": [
+                "Python (Flask/Django)",
+                "HTML/Javascript",
+                "CSS",
+                "WebSockets"
+            ]
+        },
+        {
+            "name": "Other Python",
+            "level": "Advanced",
+            "keywords": [
+                "Jupyter Notebooks",
+                "Pytest"
+            ]
+        },
+        {
+            "name": "Database",
+            "level": "Intermediate",
+            "keywords": [
+                "MariaDB/MySQL",
+                "PostgreSQL",
+                "SQLAlchemy ORM"
+            ]
+        },
+        {
+            "name": "iOS/macOS Development",
+            "level": "Beginner",
+            "keywords": [
+                "Swift",
+                "SwiftUI"
+            ]
+        },
+        {
+            "name": "DevOps",
+            "level": "Intermediate",
+            "keywords": [
+                "Docker/Docker-Compose",
+                "Nginx",
+                "Let's Encrypt",
+                "Fail2Ban"
+            ]
+        }
     ]
 }
