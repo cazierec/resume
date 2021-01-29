@@ -11,4 +11,5 @@
             "runIn": "backend"
         }
     ],
+    "editor.wordWrap": "on",
 }
