@@ -42,12 +42,11 @@
             "position": "Level 2/3 Base Support Engineer",
             "website": "https://www.aa.com",
             "startDate": "2015-09-28",
-            "summary": "Working in the hangars alongside mechanics to revise errors in technical documentation, providing reinforcing repairs and damage removal instructions. These repairs required development and approval in a span of hours to ensure work continued and the Maintenance visits did not exceed scheduled span.",
+            "summary": "Working in the hangars alongside mechanics to revise errors in technical documentation, providing reinforcing repairs and damage removal instructions. This damage required evaluation, repair development and approval, and documentation, typically within a few hours, to ensure work continued and the Maintenance visits did not exceed scheduled span. Kind of like installing metal bandaids on the outsides of the fuselage.",
             "highlights": [
-                "Writing technical repair documentation to provide mechanics with detailed step-by-step instructions to address corrosion, impact, wear, and other damages on aircraft structure.",
-                "Wrote structural repairs installing reinforcing doublers/triplers, repair straps, nested angles, etc., in compliance with 14CFR43 and other regulatory requirements.",
-                "Primarily focused on the B737-NG and A320F fleets daily triage and continuing maintenance. Additionally, worked a number of projects including B777 and B787 Cabin Retrofit Programs, as well as B737-MAX deliveries.",
-                "Created internal drawings to fabricate replacement components in-house to reduce costs and supplier delays from the OEM."
+                "Addressing corrosion, wear, impact, and other damage with reinforcing doubler/tripler repairs.",
+                "Maintaining regulatory compliance to 14CFR43, and internal/OEM requirements.",
+                "Primarily B737-NG and A320F fleets, but also including B777 and B787 mods, as well as B737-MAX deliveries."
             ]
         },
         {
@@ -58,10 +57,9 @@
             "endDate": "2015-09-25",
             "summary": "Returning under a project contract to implement a pest control program, and historical maintenance tracking.",
             "highlights": [
-                "Initiated and implemented an airline-wide pest control program accomplished on full 900+ aircraft fleet, replacing two separate pre-merger programs with a unified system.",
+                "Implemented fleetwide (900+ aircraft) pest control program",
                 "Created an Excel VBA \"Program\" to provide B757 lessors with generated reports of Electrical Load and Structural Modification data",
-                "Developed Maintenance procedures, specifically focused on Fire Suppression, and Oxygen Generation systems, and Corrosion Prevention and Control (CPCP) Program",
-                "Tracked MD80 Cockpit window pane, frame, and seal temperature exposure in an effort to reduce unneeded part replacement and save on parts, labor, and cost"
+                "Tracked component environmental exposure to minimize unnecessary replacement and rework."
             ]
         },
         {
@@ -70,13 +68,12 @@
             "website": "https://www.aa.com",
             "startDate": "2012-05-28",
             "endDate": "2014-08-15",
-            "summary": "One of the largest airlines globally, AA Tech Ops maintains a number of different aircraft fleets from multiple manufacturers. I worked with them on and off for three years, while in school, as a coop and intern in various Fleet project groups.",
+            "summary": "One of the largest airlines globally, AA Tech Ops maintains a number of different aircraft fleets from multiple manufacturers. I worked with them, on and off for three years while in school, as a coop and intern in various Fleet project groups.",
             "highlights": [
-                "Starting with the Boeing Narrowbody fleets, and eventually including B757/B767, revising technical documentation in compliance with FAA, CFR, and OEM regulations, to incorporate reliability and ease of maintenance changes",
-                "Created a package of documentation to demonstrate B737-NG Nitrogen Generation System Maintenance schedule and requirements to Senior Management and regulatory agencies.",
-                "Designed a drop-in air filtration system for the B737-NG and B757, working with outside vendor groups for manufacturing and airflow testing, and implemented across fleets, in excess of 500 aircraft",
-                "Analyzed repeat Maintenance issues to evaluate the possibility of extending the out-of-service check intervals by 50%",
-                "Developed Maintenance procedures for all fleets, specifically focused on Nitrogen Generation System, Landing Gear, and Fuel Management systems"
+                "Revised technical manuals to improve reliability, save on cost and labor, and incorporate regulatory/OEM requirements.",
+                "Developed Nitrogen Generation System safety program to demonstrate airline capability to the FAA",
+                "Designed a drop-in air filtration system, prototyped with vendors, and implemented across fleets, in excess of 500 aircraft",
+                "Analyzed repeat Maintenance issues to evaluate the possibility of extending the out-of-service check intervals by 50%"
             ]
         },
         {
@@ -89,7 +86,7 @@
             "highlights": [
                 "Replaced catalog of approximately 4000 individual hydraulic component CAD models with parametrically-generated designs and frameworks, allowing for on-the-fly creation of parts",
                 "The parametric generation approach resulted in ~75% decrease in storage requirements and 3x speed increase, while also providing the functionality of creating individually customizable models",
-                "Developed and offered a training program for combining the individual components to create full oilfield assemblies to demonstrate sales capabilities"
+                "Developed and offered a training program for combining the individual components to create full oilfield assemblies to sales departments"
             ]
         }
     ],
@@ -127,30 +124,22 @@
     ],
     "skills": [
         {
-            "name": "Web Development",
+            "name": "Python",
             "level": "Advanced",
             "keywords": [
-                "Python (Flask/Django)",
+                "Web Frameworks (Flask/Django)",
+                "Pytest",
+                "Jupyter",
+                "MySQL/MariaDB/SQLAlchemy ORM"
+            ]
+        },
+        {
+            "name": "Front End Web Design",
+            "level": "Advanced",
+            "keywords": [
                 "HTML/JavaScript",
                 "CSS",
                 "WebSockets"
-            ]
-        },
-        {
-            "name": "Other Python",
-            "level": "Advanced",
-            "keywords": [
-                "Jupyter Notebooks",
-                "Pytest"
-            ]
-        },
-        {
-            "name": "Database",
-            "level": "Intermediate",
-            "keywords": [
-                "MariaDB/MySQL",
-                "PostgreSQL",
-                "SQLAlchemy ORM"
             ]
         },
         {
