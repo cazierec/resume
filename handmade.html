@@ -21,7 +21,7 @@
             background: #fff;
             font: 14px 'Open Sans', Helvetica, Arial, sans-serif;
             line-height: 1.4;
-            margin: 0 0;
+            margin: 0;
             margin-bottom: 100px;
         }
 
@@ -37,18 +37,38 @@
         }
 
         section h2 {
-            font-size: 1.4em;
-            margin: 0 0 1em;
+            margin: 0;
+            padding: 8px 0 8px 0;
             text-transform: uppercase;
-            color: #820d22;
             font-weight: 400;
+            font-size: 1.4em;
+            color: #820d22;
         }
 
-        div.job {
-            margin: 0.2em 1em 0.2em 0;
-            display: inline-block;
+        section.section {
+            margin-left: 8px;
+        }
+
+        section.section * {
+            padding: 0;
+        }
+
+        table.work {
+            vertical-align: middle;
+        }
+
+        th.company {
+            text-transform: uppercase;
             font-size: 1.2em;
             font-weight: 600;
+            text-align: left;
+            padding-left: 0;
+        }
+
+        td.dates {
+            color: #6B6B6B;
+            text-align: right;
+            padding-right: 0;
         }
 
         .heading header .contact .detail {
@@ -69,7 +89,7 @@
 
         #resume {
             margin: 2em 2em 2em 2.5em;
-            max-width: 760px;
+            max-width: 768px;
         }
 
         #abstract {
@@ -89,12 +109,17 @@
             border-bottom: 0 none transparent;
         }
 
-        table.table.left th, table.table.left td {
+        table.table.skills tbody tr th {
+            text-transform: uppercase;
+            padding-left: 0;
+        }
+
+        table.table.left th,
+        table.table.left td {
             border-bottom: 0 none transparent;
             border-left: 1px solid rgb(222, 226, 230);
             width: 25%;
         }
-
     </style>
 </head>
 
