@@ -83,6 +83,15 @@
             content: "\f09b\00a0";
         }
 
+        a.external::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 14px;
+            text-rendering: auto;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\f35d\00a0";
+        }
+
         .heading header .contact .detail a.tel {
             color: #000000;
         }
@@ -247,6 +256,32 @@
                 </div>
             </section>
         </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <section class="section">
+                <table class="table work">
+                    <tbody>
+                        <th class="company" scope="row">Jeopardy! Webapp</th>
+                        <td>Python + SQLAlchemy + Websockets + HTML/CSS/JS</td>
+                        <td class="detail col projects">
+                            <a class="gh" href="https://github.com/cazier/jeopardy">Github</a>
+                            <a> | </a>
+                            <a class="external" href="https://jeopardy.cazier.me">Link</a>
+                        </td>
+                    </tbody>
+                </table>
+                <div class="summary">
+                    Creating a multiplayer version of the iconic game show with couch-coop or online play.
+                </div>
+                <ul class="highlights">
+                    <li>The backend is written in Python using Flask to serve pages and Socket.IO for the async
+                        bi-directional communication</li>
+                    <li>The frontend uses HTML and CSS for styling, and standard JavaScript for client side events</li>
+                    <li>A separate API to provide game data, as well as developer access to the bank of >400k Jeopardy!
+                        questions/answers</li>
+                    <li>API data is stored in a database (currently just SQLite) and interfaced with the SQLAlchemy ORM
+                    </li>
+                </ul>
             </section>
         </section>
         <section id="skills">
