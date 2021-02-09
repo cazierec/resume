@@ -105,6 +105,26 @@
             vertical-align: top;
         }
 
+        ul.highlights {
+            padding: 0.5em 0 0 0.5em;
+            font-size: 90%;
+            list-style-type: none;
+            /* list-style-position: inside; */
+        }
+
+        ul.highlights li {
+            padding-left: 8px;
+        }
+
+        ul.highlights li::before {
+            content: "►";
+            color: #820d22;
+            width: 8px;
+            text-indent: -8px;
+            margin-left: -8px;
+            display: inline-block;
+        }
+
         table.table.skills tbody tr:last-child {
             border-bottom: 0 none transparent;
         }
