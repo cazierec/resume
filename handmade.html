@@ -26,8 +26,14 @@
             margin-bottom: 100px;
         }
 
-        p {
+        div.abstract {
             line-height: 1.6;
+            font-size: 90%;
+            text-align: justify;
+            padding: 6px 0 6px;
+        }
+
+        div.summary {
             font-size: 90%;
         }
 
@@ -39,7 +45,7 @@
 
         section h2 {
             margin: 0;
-            padding: 8px 0 8px 0;
+            padding: 6px 0 4px 0;
             text-transform: uppercase;
             font-weight: 400;
             font-size: 1.4em;
@@ -54,8 +60,14 @@
             padding: 0;
         }
 
-        table.work {
+        table.works {
             vertical-align: middle;
+            margin-bottom: 6px;
+        }
+
+        table.works tbody tr td:last-of-type {
+            text-align: right;
+            padding-right: 0;
         }
 
         th.company {
@@ -68,12 +80,20 @@
 
         td.dates {
             color: #6B6B6B;
-            text-align: right;
-            padding-right: 0;
         }
 
         .heading header .contact .detail {
             margin: 0 1em 0 0;
+        }
+
+        div.contact.row span:nth-child(n+4) {
+            text-align: right;
+            margin: 0 0 0 12px;
+        }
+
+        div.contact.row span:nth-child(3) {
+            text-align: center;
+            margin: 0;
         }
 
         a.gh::before {
@@ -111,10 +131,6 @@
             max-width: 768px;
         }
 
-        #abstract {
-            text-align: justify;
-        }
-
         .name {
             font-weight: 600;
             display: inline-block;
@@ -128,7 +144,7 @@
             padding: 0.5em 0 0 0.5em;
             font-size: 90%;
             list-style-type: none;
-            /* list-style-position: inside; */
+            margin-bottom: 8px;
         }
 
         ul.highlights li {
@@ -157,6 +173,29 @@
             border-bottom: 0 none transparent;
             border-left: 1px solid rgb(222, 226, 230);
             width: 25%;
+            padding-left: 8px;
+        }
+
+        @media print {
+            body {
+                font-size: 12px;
+            }
+
+            #resume {
+                margin: 0;
+            }
+
+            div.abstract {
+                padding: 6px 0 0;
+            }
+
+            section h2 {
+                padding: 6px 0 0;
+            }
+
+            /* a[href*='https:///']:after {
+                content: " ("attr(href) ") ";
+            } */
         }
     </style>
 </head>
@@ -184,26 +223,26 @@
                     </span>
                 </div>
             </header>
-            <p>
-            <p id="abstract">
+            <div class="abstract">
                 A mechanical engineer by education, having spent all of my early career fixing physical problems in
                 aircraft maintenance and reliability. I&#39;ve often used coding as a hobby and to try to automate
                 various tasks either at work or at home, but I&#39;m now looking to turn that into my profession. I have
                 worked on both long-term and large-scope campaigns, in addition to high urgency, triage-esque, projects.
                 I enjoy problem solving, and have worked to provide solutions while being conscious of labor
                 difficulties, costs, reliability and regulatory requirements, and more.
-            </p>
-            </p>
+            </div>
         </section>
         <section id="experience">
             <h2>Work History</h2>
             <section class="section">
                 <div class="item">
-                    <table class="table work">
+                    <table class="table works">
                         <tbody>
-                            <th class="company" scope="row">American Airlines - Tech Ops</th>
-                            <td>Level 3 Base Support Engineer</td>
-                            <td class="dates">Sep 2015 - Present</td>
+                            <tr>
+                                <th class="company" scope="row">American Airlines - Tech Ops</th>
+                                <td>Level 3 Base Support Engineer</td>
+                                <td class="dates">Sep 2015 - Present</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="summary">
@@ -222,11 +261,13 @@
                     </ul>
                 </div>
                 <div class="item">
-                    <table class="table work">
+                    <table class="table works">
                         <tbody>
-                            <th class="company" scope="row">American Airlines - Tech Ops</th>
-                            <td>Contract Fleet Engineer</td>
-                            <td class="dates">Aug 2014 - Sep 2015</td>
+                            <tr>
+                                <th class="company" scope="row">American Airlines - Tech Ops</th>
+                                <td>Contract Fleet Engineer</td>
+                                <td class="dates">Aug 2014 - Sep 2015</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="summary">
@@ -242,11 +283,13 @@
                     </ul>
                 </div>
                 <div class="item">
-                    <table class="table work">
+                    <table class="table works">
                         <tbody>
-                            <th class="company" scope="row">American Airlines - Tech Ops</th>
-                            <td>Coop/Intern Fleet Engineer</td>
-                            <td class="dates">May 2012 - Aug 2014</td>
+                            <tr>
+                                <th class="company" scope="row">American Airlines - Tech Ops</th>
+                                <td>Coop/Intern Fleet Engineer</td>
+                                <td class="dates">May 2012 - Aug 2014</td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="summary">
@@ -272,15 +315,17 @@
         <section id="projects">
             <h2>Projects</h2>
             <section class="section">
-                <table class="table work">
+                <table class="table works">
                     <tbody>
-                        <th class="company" scope="row">Jeopardy! Webapp</th>
-                        <td>Python + SQLAlchemy + Websockets + HTML/CSS/JS</td>
-                        <td class="detail col projects">
-                            <a class="gh" href="https://github.com/cazier/jeopardy">Github</a>
-                            <a> | </a>
-                            <a class="external" href="https://jeopardy.cazier.me">Link</a>
-                        </td>
+                        <tr>
+                            <th class="company" scope="row">Jeopardy! Webapp</th>
+                            <td>Python + SQLAlchemy + Websockets + HTML/CSS/JS</td>
+                            <td class="detail col">
+                                <a class="gh" href="https://github.com/cazier/jeopardy">Github</a>
+                                <a> | </a>
+                                <a class="external" href="https://jeopardy.cazier.me">Link</a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="summary">
