@@ -65,6 +65,10 @@
             margin-bottom: 6px;
         }
 
+        table.works tbody tr td:first-of-type {
+            text-align: center;
+        }
+
         table.works tbody tr td:last-of-type {
             text-align: right;
             padding-right: 0;
@@ -84,6 +88,11 @@
 
         .heading header .contact .detail {
             margin: 0 1em 0 0;
+            white-space: nowrap;
+        }
+
+        .contact.row {
+            flex-wrap: nowrap;
         }
 
         div.contact.row span:nth-child(n+4) {
@@ -182,7 +191,7 @@
             }
 
             #resume {
-                margin: 0;
+                margin: 1em auto auto auto;
             }
 
             div.abstract {
@@ -193,9 +202,21 @@
                 padding: 6px 0 0;
             }
 
-            /* a[href*='https:///']:after {
-                content: " ("attr(href) ") ";
-            } */
+            a.gh::after {
+                content: ": /cazier"
+            }
+
+            a.li::after {
+                content: ": /cazier"
+            }
+
+            .works * a.gh::after {
+                content: ": /cazier/jeopardy"
+            }
+
+            #projects section.section table.table.works tbody tr td.detail.col a:not(:first-child) {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -213,7 +234,7 @@
                         <a href="mailto://***REMOVED***">***REMOVED***</a>
                     </span>
                     <span class="detail col">
-                        <a href="https://cazier.me">https://cazier.me</a>
+                        <a class="external" href="https://cazier.me">https://cazier.me</a>
                     </span>
                     <span class="detail col">
                         <a class="gh" href="https://github.com/cazier">Github</a>
@@ -276,7 +297,7 @@
                     </div>
                     <ul class="highlights">
                         <li>Implemented fleetwide (900+ aircraft) pest control program</li>
-                        <li>Created an VBA tool to provide B757 lessors with generated reports of Electrical Load and
+                        <li>Created a VBA tool to provide B757 lessors with generated reports of Electrical Load and
                             Structural Modification data</li>
                         <li>Tracked component environmental exposure to minimize unnecessary replacement
                             and rework.</li>
