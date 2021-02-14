@@ -152,6 +152,7 @@
     "projects": [
         {
             "name": "Jeopardy! Webapp",
+            "startDate": "2019-06-30",
             "links": {
                 "github": "https://github.com/cazier/jeopardy",
                 "external": "https://jeopardy.cazier.me"
