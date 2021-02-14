@@ -1,33 +1,32 @@
 import os
+import sys
 import json
-import subprocess
 import pathlib
+import argparse
+import subprocess
 
 import arrow
 from jinja2 import Template
 
+SUPPORTED_FORMATS = {"html", "pdf", "txt"}
+SUPPORTED_THEMES = {"handmade"}
 
-def load_json(filename: str = 'resume.json') -> dict:
-    path = pathlib.Path(os.getcwd(), filename).absolute()
 
-    with open(path, 'r') as json_file:
-        return json.load(fp=json_file)
-
-def format_data(data: dict):
+def format_data(data: dict) -> dict:
     # Fix Profiles
-    profiles = {i['network'].lower(): i for i in data["basics"]["profiles"]}
+    profiles: dict = {i["network"].lower(): i for i in data["basics"]["profiles"]}
     data["basics"]["profiles"] = profiles
 
     # Fix Phone Number
-    phone = "".join(c for c in data["basics"]["phone"] if c in "0123456798")
+    phone: str = "".join(c for c in data["basics"]["phone"] if c in "0123456798")
     data["basics"]["phoneNumber"] = phone
 
     # Fix Languages
-    languages = list(zip(*(i.values() for i in data["languages"])))
+    languages: list = list(zip(*(i.values() for i in data["languages"])))
     data["zipLanguages"] = languages
 
     # Fix Dates
-    for category in {'work', 'volunteer', 'education', 'awards', 'publications'}.intersection(data.keys()):
+    for category in {"work", "volunteer", "education", "awards", "publications"}.intersection(data.keys()):
         for index, item in enumerate(data[category]):
             for detail in item.keys():
                 if "date" in detail.lower():
@@ -35,50 +34,110 @@ def format_data(data: dict):
 
     return data
 
-# def fonts(theme: str) -> None:
-#     ### DON'T FORGET TO INSTALL RELEVANT FONTS TO /USR/LOCAL/SHARE/FONTS
-#     source = pathlib.Path(os.getcwd(), theme, 'fonts').absolute()
-#     destination = pathlib.Path(os.getcwd(), "out", theme, 'fonts').absolute()
 
-#     if not destination.exists():
-#         shutil.copytree(src = source, dst = destination)
-
-
-def render(data: dict, ext: str, theme: str = "handmade"):
+def render(data: dict, ext: str, theme: str = "handmade") -> str:
     if ext in ("html", "pdf"):
         path = pathlib.Path(os.getcwd(), theme, "template.html").absolute()
-    
+
     elif ext == "txt":
         path = pathlib.Path(os.getcwd(), theme, "template.txt").absolute()
 
-    with open(path, 'r') as template_file:
-        template = Template(template_file.read())    
+    with open(path, "r") as template_file:
+        template = Template(template_file.read())
 
-    output = template.render({'data': data, 'ext': ext})
+    output = template.render({"data": data, "ext": ext})
 
     return output
 
 
-if __name__ == "__main__":
-    data = load_json(filename="short-resume.json")
+def create(_input: str, _output: str, themes: str, formats: str, overwrite: bool) -> None:
+    _input = pathlib.Path(_input).absolute()
+
+    if _input.suffix.lower() != ".json":
+        sys.exit("Input file must be a .json file")
+
+    formats = set(formats.split(","))
+
+    if not formats.issubset(SUPPORTED_FORMATS):
+        sys.exit(f"Output formats can only be: {', '.join(SUPPORTED_FORMATS)}")
+
+    themes = set(themes.split(","))
+
+    if not themes.issubset(SUPPORTED_THEMES):
+        sys.exit(f"Theme can only be one of: {', '.join(SUPPORTED_THEMES)}")
+
+    with open(_input, "r") as json_file:
+        data = json.load(fp=json_file)
+
     data = format_data(data=data)
 
-    output_directory = pathlib.Path(os.getcwd(), 'out', 'handmade')
-    output_directory.mkdir(parents=True, exist_ok=True)
+    for theme in themes:
+        theme_dir = pathlib.Path(_output, theme)
 
-    # fonts(theme='handmade')
+        if not theme_dir.exists:
+            theme_dir.mkdir(parents=True, exist_ok=True)
 
-    # for out in ("pdf", "html", "txt"):
-    for out in ('html', 'txt', 'pdf'):
-        page = render(data=data, ext=out)
+        for ext in formats:
+            page = render(data=data, ext=ext, theme=theme)
 
-        path = pathlib.Path(output_directory, f'resume.{out}')
+            if (_output := pathlib.Path(theme_dir, f"{_input.stem}.{ext}")).exists and not overwrite:
+                _overwrite_file = input(f"{_output} exists. Overwrite? (y/N) ").lower() == "y"
 
-        if type(page) == str:
-            with open(path, 'w') as file:
-                file.write(page)
-                
-        if out == "pdf":
-            subprocess.run(['mv', 'out/handmade/resume.pdf', 'out/handmade/pdf.html'])
-            subprocess.run(["wkhtmltopdf", "--page-size", "Letter", "page", "out/handmade/pdf.html", "--viewport-size", "1920x1080", "--enable-local-file-access", "--print-media-type", "out/handmade/resume.pdf"], capture_output=True)
-            subprocess.run(['rm', 'out/handmade/pdf.html'])
+            else:
+                _overwrite_file = True
+
+            if type(page) == str and (_overwrite_file or overwrite):
+                with open(_output, "w") as file:
+                    file.write(page)
+
+                if ext == "pdf":
+                    subprocess.run(["mv", _output, pathlib.Path(_output.parent, "pdf.html")])
+                    subprocess.run(
+                        [
+                            "wkhtmltopdf",
+                            "--page-size",
+                            "Letter",
+                            "page",
+                            pathlib.Path(_output.parent, "pdf.html"),
+                            "--viewport-size",
+                            "1920x1080",
+                            "--enable-local-file-access",
+                            "--print-media-type",
+                            _output,
+                        ],
+                        capture_output=True,
+                    )
+                    subprocess.run(["rm", pathlib.Path(_output.parent, "pdf.html")])
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Generate resume in various formats from a single json input")
+    parser.add_argument(
+        "--input", required=False, metavar="INPUT", type=str, help="an input file [resume.json]", default="resume.json"
+    )
+    parser.add_argument(
+        "--output", required=False, metavar="OUTPUT", type=str, help="an output directory [./out/]", default="./out/"
+    )
+    parser.add_argument(
+        "--themes",
+        required=False,
+        metavar="THEMES",
+        type=str,
+        help="a comma-separated list of themes to apply [handmade]",
+        default="handmade",
+    )
+    parser.add_argument(
+        "--formats",
+        required=False,
+        metavar="FORMATS",
+        type=str,
+        help="a comma-separated list of file formats to generate [pdf,html,txt]",
+        default="pdf,html,txt",
+    )
+    parser.add_argument(
+        "--overwrite", required=False, action="store_true", help="overwrite existing files (False)", default=False
+    )
+
+    args = parser.parse_args()
+
+    create(_input=args.input, _output=args.output, themes=args.themes, formats=args.formats, overwrite=args.overwrite)
