@@ -74,7 +74,7 @@ def create(_input: str, _output: str, themes: str, formats: str, overwrite: bool
     for theme in themes:
         theme_dir = pathlib.Path(_output, theme)
 
-        if not theme_dir.exists:
+        if not theme_dir.exists():
             theme_dir.mkdir(parents=True, exist_ok=True)
 
         for ext in formats:
