@@ -7,7 +7,7 @@ on:
     
 jobs:
   validate:
-    runs-on: [ ubuntu-latest ]
+    runs-on: [ ubuntu-20.04 ]
     
     steps:
       - uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
           jsonschema --instance resume.json schema.json
 
   render:
-    runs-on: [ ubuntu-latest ]
+    runs-on: [ ubuntu-20.04 ]
     
     steps:
       - uses: actions/checkout@v2
@@ -43,6 +43,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
+
+      - name: Installing wkhtmltopdf
+        run: |
+          curl -L https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb > wkhtmltopdf.deb
+          sudo dpkg -i wkhtmltopdf.deb
           
       - name: Create files
         run: |
