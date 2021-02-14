@@ -1,15 +1,15 @@
 {
-    "runOnSave.commands": [
-        {
-            "match": ".*resume.json",
-            "command": "cd ${fileDirname}; hackmyresume build ${file} TO out/spartan/resume.all -t node_modules/jsonresume-theme-spartan",
-            "runIn": "backend"
-        },
-        {
-            "match": ".*resume.json",
-            "command": "cd ${fileDirname}; hackmyresume build ${file} TO out/stack/resume.all -t node_modules/jsonresume-theme-stackoverflow",
-            "runIn": "backend"
-        }
-    ],
+
+    "liveServer.settings.wait": 500,
     "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "venv": true,
+        ".pytest*": true,
+        "**/__pycache__": true,
+    },
 }
