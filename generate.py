@@ -38,7 +38,7 @@ def format_data(data: dict):
 # def fonts(theme: str) -> None:
 #     ### DON'T FORGET TO INSTALL RELEVANT FONTS TO /USR/LOCAL/SHARE/FONTS
 #     source = pathlib.Path(os.getcwd(), theme, 'fonts').absolute()
-#     destination = pathlib.Path(os.getcwd(), "generated", theme, 'fonts').absolute()
+#     destination = pathlib.Path(os.getcwd(), "out", theme, 'fonts').absolute()
 
 #     if not destination.exists():
 #         shutil.copytree(src = source, dst = destination)
@@ -69,16 +69,16 @@ if __name__ == "__main__":
     for out in ('html', 'txt', 'pdf'):
         page = render(data=data, ext=out)
 
-        path = pathlib.Path(os.getcwd(), 'generated', 'handmade', f'resume.{out}')
+        path = pathlib.Path(os.getcwd(), 'out', 'handmade', f'resume.{out}')
 
         if type(page) == str:
             with open(path, 'w') as file:
                 file.write(page)
                 
         if out == "pdf":
-            subprocess.run(['mv', 'generated/handmade/resume.pdf', 'generated/handmade/pdf.html'])
-            subprocess.run(["wkhtmltopdf", "--page-size", "Letter", "page", "generated/handmade/pdf.html", "--viewport-size", "1920x1080", "--enable-local-file-access", "--print-media-type", "generated/handmade/resume.pdf"])
-            subprocess.run(['rm', 'generated/handmade/pdf.html'])
+            subprocess.run(['mv', 'out/handmade/resume.pdf', 'out/handmade/pdf.html'])
+            subprocess.run(["wkhtmltopdf", "--page-size", "Letter", "page", "out/handmade/pdf.html", "--viewport-size", "1920x1080", "--enable-local-file-access", "--print-media-type", "out/handmade/resume.pdf"])
+            subprocess.run(['rm', 'out/handmade/pdf.html'])
 
 
             print("wkhtmltopdf --page-size Letter page resume.html --viewport-size 1920x1080 --enable-local-file-access --print-media-type resume.pdf")
