@@ -1,0 +1,48 @@
+{{ data['basics']['name'] }}
+Email: {{ data["basics"]["email"] }}
+Tel: {{ data["basics"]["phone"] }}
+Web: {{ data["basics"]["website"] }}
+Github: {{ data['basics']['profiles']['github']['url'] }}
+LinkedIn: {{ data['basics']['profiles']['linkedin']['url'] }}
+
+================================================================================
+
+{{ data['basics']['summary'] }}
+
+
+SKILLS -------------------------------------------------------------------------
+{% for skill in data["skills"] %}
+- {{ skill['name'] }}: {{ ', '.join(skill['keywords']) }}{% endfor %}
+
+
+PROJECTS -----------------------------------------------------------------------
+{% for project in data["projects"] %}
+- {{ project['name'] }} -- {{ ' + '.join(project['keywords']) }}
+  {{ project['links']['github'] }}
+  {{ project['links']['external'] }}
+
+  {{ project['description'] }}{% for highlight in project['highlights'] %}
+  - {{ highlight }}{% endfor %}
+{% endfor %}
+
+WORK HISTORY -------------------------------------------------------------------
+{% for work in data["work"] %}
+- {{ work['company'] }} -- {{ work['position'] }} -- {{ work["startDate"].strftime("%b %Y")}} - {% if "endDate" in work.keys() %}{{ work["endDate"].strftime("%b %Y")}}{% else %}Present{% endif %}
+  {{ work["summary"] }}{% for highlight in work['highlights'] %}
+  - {{ highlight }}{% endfor %}
+{% endfor %}
+
+EDUCATION ----------------------------------------------------------------------
+
+{% for education in data["education"] %}- {{ education["institution"] }} -- {{ education['studyType'] }} {{ education['area'] }} -- {{ education["startDate"].strftime("%b %Y")}} - {% if "endDate" in education.keys() %}{{ education["endDate"].strftime("%b %Y")}}{% else %}Present{% endif %}
+{% endfor %}
+
+LANGUAGES ----------------------------------------------------------------------
+
+{% for language in data["languages"] %}- {{ language['language'] }} - {{ language['fluency'] }}
+{% endfor %}
+
+INTERESTS ----------------------------------------------------------------------
+
+{% for interest in data["interests"] %}- {{ interest['name'] }}
+{% endfor %}
