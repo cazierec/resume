@@ -4,8 +4,8 @@
         "label": "Mechanical Engineer",
         "email": "***REMOVED***",
         "phone": "***REMOVED***",
-        "website": "https://thecaziers.com",
-        "summary": "A mechanical engineer by education, having spent all of my early career fixing physical problems in aircraft maintenance and reliability. I've often used coding as a hobby and to try to automate various tasks either at work or at home, but I'm now looking to turn that into my profession. I have worked on both long-term and large-scope campaigns, in addition to high urgency, triage-esque, projects. I enjoy problem solving, and have worked to provide solutions while being conscious of labor difficulties, costs, reliability and regulatory requirements, and more.",
+        "website": "https://cazier.me",
+        "summary": " A mechanical engineer by education, having spent all of my early career fixing physical problems in aircraft maintenance and reliability, but also a hobbyist programmer constantly seeking ways to automate tasks at home. I have worked on both long-term and large-scope campaigns, in addition to high urgency, triage-esque, projects. I enjoy problem solving, and have worked to provide solutions while being conscious of labor difficulties, costs, reliability and regulatory requirements, and more. I am looking to combine my professional engineering experience with my penchant for automation into a career in test automation or DevOps. ",
         "location": {
             "countryCode": "US"
         },
@@ -14,14 +14,19 @@
                 "network": "Github",
                 "username": "cazier",
                 "url": "https://github.com/cazier"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "cazier",
+                "url": "https://linkedin.com/in/cazier"
             }
         ]
     },
     "education": [
         {
             "institution": "Rensselaer Polytechnic Institute",
-            "area": "Mechanical Engineer",
-            "studyType": "Bachelor",
+            "area": "Mechanical Engineering",
+            "studyType": "Bachelors",
             "startDate": "2010-08",
             "endDate": "2014-12",
             "courses": [
@@ -34,55 +39,43 @@
     ],
     "work": [
         {
-            "company": "American Airlines - Tech Ops - Maintenance & Engineering",
-            "position": "Level 2/3 Base Support Engineer",
+            "company": "American Airlines - Tech Ops",
+            "position": "Level 3 Base Support Engineer",
             "website": "https://www.aa.com",
             "startDate": "2015-09-28",
             "summary": "Working in the hangars alongside mechanics to revise errors in technical documentation, providing reinforcing repairs and damage removal instructions. This damage required evaluation, repair development and approval, and documentation, typically within a few hours, to ensure work continued and the Maintenance visits did not exceed scheduled span. Kind of like installing metal bandaids on the outsides of the fuselage.",
             "highlights": [
-                "Addressing corrosion, wear, impact, and other damage with reinforcing doubler/tripler repairs.",
-                "Maintaining regulatory compliance to 14CFR43, and internal/OEM requirements.",
-                "Primarily B737-NG and A320F fleets, but also including B777 and B787 mods, as well as B737-MAX deliveries."
-            ]
+                "Created a catalog app to simplify accessing OEM drawings with varying shapes and dimensions",
+                "Addressing corrosion, wear, impact, and other damage with reinforcing doubler/tripler repairs",
+                "Maintaining regulatory compliance to 14CFR43, and internal/OEM requirements",
+                "Primarily B737-NG and A320F fleets, but also including B777 and B787 mods, as well as B737-MAX deliveries"
+    ]
         },
         {
-            "company": "American Airlines - Johnson Service Group",
-            "position": "Contract Engineer",
+            "company": "American Airlines - Tech Ops",
+            "position": "Contract Fleet Engineer",
             "website": "https://www.aa.com",
             "startDate": "2014-08-28",
             "endDate": "2015-09-25",
             "summary": "Returning under a project contract to implement a pest control program, and historical maintenance tracking.",
             "highlights": [
+                "Created a VBA tool to provide B757 lessors with generated reports of Electrical Load and Structural Modification data",
                 "Implemented fleetwide (900+ aircraft) pest control program",
-                "Created an Excel VBA \"Program\" to provide B757 lessors with generated reports of Electrical Load and Structural Modification data",
-                "Tracked component environmental exposure to minimize unnecessary replacement and rework."
+                "Tracked component environmental exposure to minimize unnecessary replacement and rework"
             ]
         },
         {
-            "company": "American Airlines - Tech Ops - Maintenance & Engineering",
-            "position": "Coop/Internships — Narrow- and Widebody Fleet Engineering",
+            "company": "American Airlines - Tech Ops",
+            "position": "Coop/Intern Fleet Engineer",
             "website": "https://www.aa.com",
             "startDate": "2012-05-28",
             "endDate": "2014-08-15",
-            "summary": "One of the largest airlines globally, AA Tech Ops maintains a number of different aircraft fleets from multiple manufacturers. I worked with them, on and off for three years while in school, as a coop and intern in various Fleet project groups.",
+            "summary": "As part of one of the largest airlines globally, AA Tech Ops maintains a number of different aircraft fleets from multiple manufacturers. The fleet group manages aircraft maintenance programs ensuring compliance to FAA regulations and OEM/reliability guidelines. I personally worked with them on and off for three years while in school as a coop and intern among various fleet types.",
             "highlights": [
                 "Revised technical manuals to improve reliability, save on cost and labor, and incorporate regulatory/OEM requirements.",
                 "Developed Nitrogen Generation System safety program to demonstrate airline capability to the FAA",
                 "Designed a drop-in air filtration system, prototyped with vendors, and implemented across fleets, in excess of 500 aircraft",
                 "Analyzed repeat Maintenance issues to evaluate the possibility of extending the out-of-service check intervals by 50%"
-            ]
-        },
-        {
-            "company": "SWECO - MI SWACO, A Schlumberger Company",
-            "position": "Internship — CAD Drafting",
-            "website": "https://www.slb.com/companies/m-i-swaco",
-            "startDate": "2011-05-30",
-            "endDate": "2011-08-12",
-            "summary": "SWECO is an American oilfield services manufacturer of industrial filtration devices for separating solids and fluids.",
-            "highlights": [
-                "Replaced catalog of approximately 4000 individual hydraulic component CAD models with parametrically-generated designs and frameworks, allowing for on-the-fly creation of parts",
-                "The parametric generation approach resulted in ~75% decrease in storage requirements and 3x speed increase, while also providing the functionality of creating individually customizable models",
-                "Developed and offered a training program for combining the individual components to create full oilfield assemblies to sales departments"
             ]
         }
     ],
@@ -101,7 +94,7 @@
         },
         {
             "language": "Russian",
-            "fluency": "Beginner"
+            "fluency": "Intermediate"
         }
     ],
     "interests": [
@@ -126,7 +119,7 @@
                 "Web Frameworks (Flask/Django)",
                 "Pytest",
                 "Jupyter",
-                "MySQL/MariaDB/SQLAlchemy ORM"
+                "MySQL/MariaDB/SQLAlchemy"
             ]
         },
         {
@@ -135,7 +128,7 @@
             "keywords": [
                 "HTML/JavaScript",
                 "CSS",
-                "WebSockets"
+                "WebSockets/Socket.IO"
             ]
         },
         {
@@ -151,7 +144,30 @@
             "level": "Intermediate",
             "keywords": [
                 "Docker/Docker-Compose",
-                "Nginx"
+                "Nginx",
+                "Git"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Jeopardy! Webapp",
+            "links": {
+                "github": "https://github.com/cazier/jeopardy",
+                "external": "https://jeopardy.cazier.me"
+            },
+            "keywords": [
+                "Python",
+                "SQLAlchemy",
+                "WebSockets",
+                "HTML/CSS/JS"
+            ],
+            "description": "Creating a multiplayer version of the iconic game show with couch-coop or online play.",
+            "highlights": [
+                "The backend is written in Python using Flask to serve pages and Socket.IO for the async bi-directional communication",
+                "The frontend uses HTML and CSS for styling, and standard JavaScript for client side events",
+                "A separate API to provide game data, as well as developer access to the bank of >400k Jeopardy! questions/answers",
+                "API data is stored in a database (currently just SQLite) and interfaced with the SQLAlchemy ORM"
             ]
         }
     ]
