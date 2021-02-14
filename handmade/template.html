@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ data['basics']['name'] }}</title>
+
+    <meta name="description" content="My Resume - {{ data['basics']['name'] }}">
+    <meta name="author" content="{{ data['basics']['name'] }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css' />
+
+    <script src="https://kit.fontawesome.com/8e67a10275.js" crossorigin="anonymous"></script>
+
+    <style>        
+        body {
+            background: #fff;
+            font: 14px 'Open Sans', Helvetica, Arial, sans-serif;
+            line-height: 1.4;
+            margin: 0;
+            margin-bottom: 100px;
+        }
+
+        div.abstract {
+            line-height: 1.6;
+            font-size: 90%;
+            text-align: justify;
+            padding: 6px 0 6px;
+        }
+
+        div.summary {
+            font-size: 90%;
+        }
+
+        a {
+            color: #2C85B1;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        section h2 {
+            margin: 0;
+            padding: 6px 0 4px 0;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1.4em;
+            color: #820d22;
+        }
+
+        section.section {
+            margin-left: 8px;
+        }
+
+        section.section * {
+            padding: 0;
+        }
+
+        table.works {
+            vertical-align: middle;
+            margin-bottom: 6px;
+        }
+
+        table.works tbody tr td:first-of-type {
+            text-align: center;
+        }
+
+        table.works tbody tr td:last-of-type {
+            text-align: right;
+            padding-right: 0;
+        }
+
+        th.company {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 0;
+        }
+
+        td.dates {
+            color: #6B6B6B;
+        }
+
+        .heading header .contact .detail {
+            margin: 0 1em 0 0;
+            white-space: nowrap;
+        }
+
+        .contact.row {
+            flex-wrap: nowrap;
+        }
+
+        div.contact.row span:nth-child(n+4) {
+            text-align: right;
+            margin: 0 0 0 12px;
+        }
+
+        div.contact.row span:nth-child(3) {
+            text-align: center;
+            margin: 0;
+        }
+
+        div.contact.row span a {
+            vertical-align: bottom;
+        }
+
+        a.gh::before {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400;
+            font-size: 14px;
+            text-rendering: auto;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\f09b\00a0";
+        }
+
+        a.external::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 14px;
+            text-rendering: auto;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\f35d\00a0";
+        }
+
+        a.li::before {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400;
+            font-size: 14px;
+            text-rendering: auto;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\f08c\00a0";
+        }
+
+        .heading header .contact .detail a.tel {
+            color: #000000;
+        }
+
+        #resume {
+            margin: 2em 2em 2em 2.5em;
+            max-width: 768px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            margin: 0 1em 0 0;
+            vertical-align: top;
+        }
+
+        ul.highlights {
+            padding: 0.5em 0 0 0.5em;
+            font-size: 90%;
+            list-style-type: none;
+            margin-bottom: 4px;
+        }
+
+        ul.highlights li {
+            padding-left: 8px;
+        }
+
+        ul.highlights li::before {
+            content: "►";
+            color: #820d22;
+            width: 8px;
+            text-indent: -8px;
+            margin-left: -8px;
+            display: inline-block;
+        }
+
+        table.table.skills tbody tr:last-child {
+            border-bottom: 0 none transparent;
+        }
+
+        table.table.skills tbody tr th {
+            text-transform: uppercase;
+            padding-left: 0;
+        }
+
+        table.table.skills {
+            margin: 0;
+        }
+
+        table.table.left * {
+            border-bottom: 0 none transparent;
+            border-left: 1px solid rgb(222, 226, 230);
+            width: 25%;
+            padding-left: 8px;
+        }
+
+        @media print {
+            {% if ext != "pdf" %}
+            body {
+                font-size: 12px;
+            }
+
+            #resume {
+                margin: 1em auto auto auto;
+            }
+
+            {% endif %}
+
+            div.abstract {
+                padding: 6px 0 0;
+            }
+
+            section h2 {
+                padding: 6px 0 0;
+            }
+
+            {% if "github" in data["basics"]["profiles"].keys() %}
+
+            a.gh::after {
+                content: ": /{{ data["basics"]["profiles"]["github"]["username"] }}"
+            }
+            
+            {% endif %}
+
+            {% if "linkedin" in data["basics"]["profiles"].keys() %}
+
+            a.li::after {
+                content: ": /{{ data["basics"]["profiles"]["linkedin"]["username"] }}"
+            }
+
+            {% endif %}
+
+
+            table.table {
+                margin: 0;
+            }
+
+            .works * a.gh::after {
+                content: ": {{ data["projects"][0]["links"]["github"].replace("https://github.com", "") }}"
+            }
+
+            #projects section.section table.table.works tbody tr td.detail.col a:not(:first-child) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="resume" class="container-fluid">
+        <section class="heading">
+            <header>
+                <h1>{{ data['basics']['name'] }}</h1>
+                <div class="contact row">
+                    {% if "phone" in data['basics'].keys() %}
+                    <span class="detail col">
+                        <a class="tel" href="tel://{{ data['basics']['phone'] }}">{{ data['basics']['phone'] }}</a>
+                    </span>
+                    {% endif %}
+                    {% if "email" in data['basics'].keys() %}
+                    <span class="detail col">
+                        <a href="mailto://{{ data['basics']['email'] }}">{{ data['basics']['email'] }}</a>
+                    </span>
+                    {% endif %}
+                    {% if "website" in data['basics'].keys() %}
+                    <span class="detail col">
+                        <a class="external" href="{{ data['basics']['website'] }}">{{ data['basics']['website'] }}</a>
+                    </span>
+                    {% endif %}
+                    {% if "github" in data['basics']['profiles'].keys() %}
+                    <span class="detail col">
+                        <a class="gh" href="{{ data['basics']['profiles']['github']['url'] }}">Github</a>
+                    </span>
+                    {% endif %}
+                    {% if "linkedin" in data['basics']['profiles'].keys() %}
+                    <span class="detail col">
+                        <a class="li" href="{{ data['basics']['profiles']['linkedin']['url'] }}">LinkedIn</a>
+                    </span>
+                    {% endif %}
+                </div>
+            </header>
+            {% if "summary" in data["basics"].keys() %}
+            <div class="abstract">
+                {{ data['basics']['summary'] }}
+            </div>
+            {% endif %}
+        </section>
+        {% if "skills" in data.keys() %}
+        <section id="skills">
+            <h2>skills</h2>
+            <section class="section">
+                <table class="table skills">
+                    <tbody>
+                        {% for skill in data["skills"] %}
+                        <tr>
+                            <th scope="row">{{ skill['name'] }}</th>
+                            <td>{{ ", ".join(skill["keywords"]) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        {% endif %}
+        {% if "projects" in data.keys() %}
+        <section id="projects">
+            <h2>Projects</h2>
+            <section class="section">
+                {% for item in data["projects"] %}
+                <div class="item">
+                    <table class="table works">
+                        <tbody>
+                            <tr>
+                                <th class="company" scope="row">{{ item["name"] }}</th>
+                                <td>{{ " + ".join(item["keywords"]) }}</td>
+                                <td class="detail col">
+                                    {% if "github" in item["links"].keys() %}
+                                    <a class="gh" href="{{ item['links']['github'] }}">Github</a>
+                                    <a> | </a>
+                                    {% endif %}
+                                    {% if "external" in item["links"].keys() %}
+                                    <a class="external" href="{{ item['links']['external'] }}">Link</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="summary">
+                        {{ item["description"] }}
+                    </div>
+                    <ul class="highlights">
+                        {% for highlight in item["highlights"] %}
+                        <li>{{ highlight }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </section>
+        {% endif %}
+        </section>
+        {% if "work" in data.keys() %}
+        <section id="experience">
+            <h2>Work History</h2>
+            <section class="section">
+                {% for item in data["work"]|sort(attribute="startDate", reverse=True) %}
+                <div class="item">
+                    <table class="table works">
+                        <tbody>
+                            <tr>
+                                <th class="company" scope="row">{{  item["company"] }}</th>
+                                <td>{{ item["position"] }}</td>
+                                <td class="dates">{{ item["startDate"].strftime("%b %Y")}} - {% if "endDate" in item.keys() %}{{ item["endDate"].strftime("%b %Y")}}{% else %}Present{% endif %}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="summary">{{ item["summary"] }}
+                    </div>
+                    <ul class="highlights">
+                        {% for highlight in item["highlights"] %}
+                        <li>{{ highlight }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </section>
+        </section>
+        {% endif %}
+        {% if "education" in data.keys() %}
+        <section id="education">
+            <h2>education</h2>
+            {% for item in data["education"] %}
+            <section class="section">
+                <table class="table works">
+                    <tbody>
+                        <tr>
+                            <th class="school" scope="row">{{ item["institution"] }}</th>
+                            <td>{{ item["studyType"] }} {{ item["area"] }}</td>
+                            <td class="dates">{{ item["startDate"].strftime("%B %Y") }} - {{ item["endDate"].strftime("%B %Y") }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            {% endfor %}
+        </section>
+        {% endif %}
+        {% if "zipLanguages" in data.keys() %}
+        <section id="languages">
+            <h2>Languages</h2>
+            <section class="section">
+                <table class="table languages left">
+                    <thead>
+                        <tr>
+                            {% for language in data["zipLanguages"][0] %}
+                            <th scope="col">{{ language }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for language in data["zipLanguages"][1] %}
+                            <td>{{ language }}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+        {% endif %}
+        {% if "interests" in data.keys() %}
+        <section id="interests">
+            <h2>interests</h2>
+            <section class="section">
+                <table class="table interests left">
+                    <thead>
+                        <tr>
+                            {% for language in data["interests"] %}
+                            <th scope="col">{{ language['name'] }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                </table>
+            </section>
+        </section>
+        {% endif %}
+    </div>
+</body>
+
+</html>
