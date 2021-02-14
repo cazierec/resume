@@ -3,7 +3,7 @@
     "liveServer.settings.wait": 500,
     "editor.wordWrap": "on",
     "files.exclude": {
-        "**/.git": true,
+        "**/.git/": true,
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,

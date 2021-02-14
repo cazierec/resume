@@ -46,7 +46,7 @@ jobs:
           
       - name: Create files
         run: |
-          python generate.py
+          python generate.py --overwrite
           
           
       
