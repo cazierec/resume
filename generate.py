@@ -63,13 +63,16 @@ if __name__ == "__main__":
     data = load_json(filename="short-resume.json")
     data = format_data(data=data)
 
+    output_directory = pathlib.Path(os.getcwd(), 'out', 'handmade')
+    output_directory.mkdir(parents=True, exist_ok=True)
+
     # fonts(theme='handmade')
 
     # for out in ("pdf", "html", "txt"):
     for out in ('html', 'txt', 'pdf'):
         page = render(data=data, ext=out)
 
-        path = pathlib.Path(os.getcwd(), 'out', 'handmade', f'resume.{out}')
+        path = pathlib.Path(output_directory, f'resume.{out}')
 
         if type(page) == str:
             with open(path, 'w') as file:
@@ -77,8 +80,5 @@ if __name__ == "__main__":
                 
         if out == "pdf":
             subprocess.run(['mv', 'out/handmade/resume.pdf', 'out/handmade/pdf.html'])
-            subprocess.run(["wkhtmltopdf", "--page-size", "Letter", "page", "out/handmade/pdf.html", "--viewport-size", "1920x1080", "--enable-local-file-access", "--print-media-type", "out/handmade/resume.pdf"])
+            subprocess.run(["wkhtmltopdf", "--page-size", "Letter", "page", "out/handmade/pdf.html", "--viewport-size", "1920x1080", "--enable-local-file-access", "--print-media-type", "out/handmade/resume.pdf"], capture_output=True)
             subprocess.run(['rm', 'out/handmade/pdf.html'])
-
-
-            print("wkhtmltopdf --page-size Letter page resume.html --viewport-size 1920x1080 --enable-local-file-access --print-media-type resume.pdf")
