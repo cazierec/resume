@@ -4,3 +4,4 @@ package-lock.json
 out/
 venv/
 __pycache__/
+*.deb
