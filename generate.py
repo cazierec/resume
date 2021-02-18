@@ -50,7 +50,7 @@ def render(data: dict, ext: str, theme: str = "handmade") -> str:
     return output
 
 
-def create(_input: str, _output: str, themes: str, formats: str, overwrite: bool) -> None:
+def create(_input: str, _output: str, themes: str, formats: str, overwrite: bool, use_name: bool) -> None:
     _input = pathlib.Path(_input).absolute()
 
     if _input.suffix.lower() != ".json":
@@ -71,6 +71,12 @@ def create(_input: str, _output: str, themes: str, formats: str, overwrite: bool
 
     data = format_data(data=data)
 
+    if use_name:
+        output_name = data["basics"]["name"]
+
+    else:
+        output_name = _input.stem
+
     for theme in themes:
         theme_dir = pathlib.Path(_output, theme)
 
@@ -80,7 +86,7 @@ def create(_input: str, _output: str, themes: str, formats: str, overwrite: bool
         for ext in formats:
             page = render(data=data, ext=ext, theme=theme)
 
-            if (_output := pathlib.Path(theme_dir, f"{_input.stem}.{ext}")).exists and not overwrite:
+            if (_output := pathlib.Path(theme_dir, f"{output_name}.{ext}")).exists and not overwrite:
                 _overwrite_file = input(f"{_output} exists. Overwrite? (y/N) ").lower() == "y"
 
             else:
@@ -135,9 +141,24 @@ if __name__ == "__main__":
         default="pdf,html,txt",
     )
     parser.add_argument(
-        "--overwrite", required=False, action="store_true", help="overwrite existing files (False)", default=False
+        "--overwrite", required=False, action="store_true", help="overwrite existing files [False]", default=False
+    )
+    parser.add_argument(
+        "--use-name-in-files",
+        dest="use_name",
+        required=False,
+        action="store_true",
+        help="save files as the name in the resume [False]",
+        default=False,
     )
 
     args = parser.parse_args()
 
-    create(_input=args.input, _output=args.output, themes=args.themes, formats=args.formats, overwrite=args.overwrite)
+    create(
+        _input=args.input,
+        _output=args.output,
+        themes=args.themes,
+        formats=args.formats,
+        overwrite=args.overwrite,
+        use_name=args.use_name,
+    )
