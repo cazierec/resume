@@ -12,14 +12,13 @@ SUPPORTED_FORMATS = {"html", "pdf", "txt"}
 SUPPORTED_THEMES = {"handmade"}
 
 
-def format_data(data: dict) -> dict:
+def format_data(data: dict, phone: str, email: str) -> dict:
     # Fix Profiles
     profiles: dict = {i["network"].lower(): i for i in data["basics"]["profiles"]}
     data["basics"]["profiles"] = profiles
 
-    # Fix Phone Number
-    phone: str = "".join(c for c in data["basics"]["phone"] if c in "0123456798")
-    data["basics"]["phoneNumber"] = phone
+    data["basics"]["phone"] = f"({phone[:3]}) {phone[3:6]} - {phone[6:]}"
+    data["basics"]["email"] = email
 
     # Fix Languages
     languages: list = list(zip(*(i.values() for i in data["languages"])))
@@ -50,7 +49,9 @@ def render(data: dict, ext: str, theme: str = "handmade") -> str:
     return output
 
 
-def create(_input: str, _output: str, themes: str, formats: str, overwrite: bool, use_name: bool) -> None:
+def create(
+    _input: str, _output: str, themes: str, formats: str, overwrite: bool, use_name: bool, phone: str, email: str
+) -> None:
     _input = pathlib.Path(_input).absolute()
 
     if _input.suffix.lower() != ".json":
@@ -69,7 +70,7 @@ def create(_input: str, _output: str, themes: str, formats: str, overwrite: bool
     with open(_input, "r") as json_file:
         data = json.load(fp=json_file)
 
-    data = format_data(data=data)
+    data = format_data(data=data, phone=phone, email=email)
 
     if use_name:
         output_name = data["basics"]["name"]
@@ -152,6 +153,24 @@ if __name__ == "__main__":
         default=False,
     )
 
+    parser.add_argument(
+        "--phone",
+        required=False,
+        metavar="PHONE",
+        type=str,
+        help="the phone number to add to the top of the page",
+        default="5555555555",
+    )
+
+    parser.add_argument(
+        "--email",
+        required=False,
+        metavar="EMAIL",
+        type=str,
+        help="the email address to add to the top of the page",
+        default="user@email.whom",
+    )
+
     args = parser.parse_args()
 
     create(
@@ -161,4 +180,6 @@ if __name__ == "__main__":
         formats=args.formats,
         overwrite=args.overwrite,
         use_name=args.use_name,
+        phone=args.phone,
+        email=args.email,
     )
